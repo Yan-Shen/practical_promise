@@ -226,9 +226,9 @@ function problemF () {
   // });
 
   // // promise version
-  var p1 = promisifiedReadFile('poem-one/stanza-03.txt')
+  promisifiedReadFile('poem-one/stanza-03.txt')
   .then(function(str){
-    console.log('-- F. callback version done --');
+    console.log('-- F. callback version (stanza three) --');
     blue(str);
     return promisifiedReadFile('poem-one/wrong-file-name.txt')
   },
@@ -241,11 +241,11 @@ function problemF () {
   .then(function(str){
     console.log('-- F. callback version (stanza four) --');
     blue(str);
-    console.log('-- F. callback version done --');
   },
   function(err){
     console.log('-- F. callback version (stanza four) --');
-    return magenta(err);
+    magenta(err);
+    console.log('-- F. callback version done --');
   })
 
 }
