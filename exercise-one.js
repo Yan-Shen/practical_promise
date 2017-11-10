@@ -50,7 +50,14 @@ function problemA () {
   });
 
   // promise version
-  // ???
+  // promisifiedReadFile('poem-one/stanza-01.txt').
+  // then(function(str){
+  //   console.log('-- A. Promise version --');
+  //   blue(str);
+  // }, function(err){
+  //   console.log(err);
+  // })
+
 
 }
 
